@@ -1,0 +1,188 @@
+/* font-types */
+@font-face {
+  font-family: "big";
+  src: url("../../Assests/fonts/Artegra\ -\ Suprema\ Thin.otf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "he";
+  src: url("../../Assests/fonts/Kayak\ Sans\ Regular.otf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "para";
+  src: url("../../Assests/fonts/Artegra\ -\ Suprema\ Thin.otf");
+  font-style: normal;
+}
+.back-main {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+.b-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  z-index: 2;
+}
+.lot {
+  width: 50%;
+  margin: 3em;
+  z-index: 2;
+}
+.b-text {
+  text-align: left;
+  padding: 2em;
+  margin: 2em;
+  z-index: 2;
+}
+.b-text p {
+  color: #343a40;
+  z-index: 2;
+}
+.b-text h1 {
+  font-size: 3.5em;
+  font-weight: 1000;
+  padding-bottom: 0.5em;
+  position: relative;
+  color: #212529;
+  font-family: big;
+  transition: 1s;
+}
+
+.b-text h1::after {
+  content: "";
+  position: absolute;
+  top: -0.4rem;
+  left: -4.5rem;
+  bottom: 1.5rem;
+  width: 100%;
+  background-image: linear-gradient(180deg, transparent, #adb5bd 0);
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease;
+  z-index: -1;
+  transform: scaleX(0.055);
+  transform-origin: left;
+  transition: transform 350ms ease-in;
+}
+.b-text h1:hover::after {
+  transform: scaleX(1.15);
+}
+.b-text h1:hover {
+  color: #f8f9fa;
+}
+.b-text h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  padding-bottom: 0.5em;
+  color: #495057;
+  font-family: he;
+}
+.b-text p {
+  font-size: 1.3em;
+  font-weight: 600;
+  font-family: para;
+  max-width: 500px;
+  line-height: 1.8em;
+  margin: 0 0 3em 0;
+  z-index: 2;
+}
+@media screen and (max-width: 1400px) {
+  .lot {
+    width: 80%;
+    margin: 2em;
+  }
+  .b-text {
+    text-align: left;
+    padding: 1em;
+    margin: 1em;
+    z-index: 1;
+  }
+  .b-text p {
+    font-size: medium;
+  }
+  .b-text h2 {
+    font-size: larger;
+    font-weight: 700;
+    padding-bottom: 0.5em;
+  }
+  .b-text h1 {
+    font-size: xx-large;
+    font-weight: 600;
+    padding-bottom: 0.5em;
+    position: relative;
+
+    transition: 1s;
+  }
+  .b-text h1::after {
+    content: "";
+    position: absolute;
+    top: -0.3rem;
+    left: -2rem;
+    bottom: 0.8rem;
+    width: 100%;
+    background-image: linear-gradient(180deg, transparent, #adb5bd 0);
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease;
+    z-index: -1;
+    transform: scaleX(0.055);
+    transform-origin: left;
+    transition: transform 350ms ease-in;
+  }
+}
+@media screen and (max-width: 800px) {
+  .b-container {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .lot {
+    width: 80%;
+
+    margin: 0em;
+  }
+
+  .b-text {
+    text-align: left;
+    padding: 1em;
+    margin: 1em;
+    z-index: 1;
+  }
+  .b-text p {
+    font-size: 0.8em;
+  }
+  .b-text h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    padding-bottom: 0.5em;
+  }
+  .b-text h1 {
+    font-size: 2em;
+    font-weight: 600;
+    padding-bottom: 0.5em;
+    position: relative;
+
+    transition: 1s;
+  }
+  .b-text h1::after {
+    content: "";
+    position: absolute;
+    top: -0.3rem;
+    left: -2rem;
+    bottom: 1.2rem;
+    width: 100%;
+    background-image: linear-gradient(180deg, transparent, #adb5bd 0);
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease;
+    z-index: -1;
+    transform: scaleX(0.055);
+    transform-origin: left;
+    transition: transform 350ms ease-in;
+  }
+}

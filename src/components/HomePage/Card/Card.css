@@ -1,0 +1,227 @@
+input,
+button,
+submit {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.main-big-header h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 4px;
+  bottom: 0;
+  top: 40px;
+  left: 0;
+  background-color: #adb5bd;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.main-big-header h1:hover:after {
+  transform: scaleX(0);
+  transform-origin: bottom left;
+}
+.main-big {
+  /* height: 50vh; */
+  padding: 2em;
+  background-color: #f4f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-big-header {
+  padding-bottom: 2em;
+}
+.main-big-header h1 {
+  font-family: big;
+  display: inline-block;
+  position: relative;
+}
+.big-b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 1s;
+}
+.big-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.small-cont {
+  display: flex;
+  background-color: white;
+  justify-content: space-evenly;
+  align-items: center;
+  max-height: 1200px;
+  max-width: 1200px;
+  min-height: 250px;
+  min-width: 250px;
+}
+.cont-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  min-height: 250px;
+  min-width: 250px;
+}
+.cont-img img {
+  height: 100%;
+  width: 60%;
+  min-height: 250px;
+  min-width: 250px;
+}
+.cont-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+}
+.cont-info h1 {
+  margin-bottom: 24px;
+  font-size: 3em;
+  line-height: 1.1;
+  font-weight: 600;
+  font-family: big;
+}
+
+.cont-info h2 {
+  margin-bottom: 24px;
+  font-size: larger;
+  line-height: 1.1;
+  font-weight: 600;
+  font-family: he;
+}
+.cont-info p {
+  font-size: small;
+  line-height: 16px;
+  letter-spacing: 1.4px;
+  margin-bottom: 16px;
+  font-family: para;
+  font-weight: 600;
+}
+
+.arrows-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  position: relative;
+  right: 8em;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: 0.5 ease-in-out;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.arrows-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  position: relative;
+  border-radius: 9px;
+  left: 8em;
+  cursor: pointer;
+  transition: 0.5 ease-in-out;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+@media screen and (max-width: 800px) {
+  .main-big {
+    /* height: 50vh; */
+    width: 100%;
+    overflow: hidden;
+  }
+  .cont-img {
+    flex-direction: column;
+  }
+  .arrows-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    right: 0px;
+    padding: 4em;
+  }
+
+  .arrows-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    left: 0px;
+    padding: 2em;
+  }
+  .cont-info h1 {
+    margin-bottom: 10px;
+    font-size: x-large;
+    line-height: 1.1;
+    font-weight: 600;
+  }
+
+  .cont-info h2 {
+    margin-bottom: 10px;
+    font-size: larger;
+    line-height: 1.1;
+    font-weight: 600;
+  }
+  .cont-info p {
+    font-size: small;
+    line-height: 16px;
+    letter-spacing: 1.4px;
+    margin-bottom: 16px;
+    width: 200px;
+  }
+
+  .small-cont {
+    display: flex;
+    background-color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  .cont-img img {
+    height: 500px;
+    width: 500px;
+  }
+  .cont-info {
+    width: 90%;
+    height: 100%;
+  }
+  .main-big-header h1::after {
+    display: none;
+  }
+}

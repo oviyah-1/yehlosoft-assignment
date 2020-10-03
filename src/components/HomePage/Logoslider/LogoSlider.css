@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "c-head";
+  src: url("../../../Assests/fonts/Clab\ Personal\ Use-Bold.otf");
+  font-style: normal;
+}
+
+.lo-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo-head {
+  margin: 2em;
+}
+.logo-head h1 {
+  color: #212529;
+  font-family: big;
+  font-size: 3em;
+}
+
+.link-1 {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  padding: 0 1px;
+  -webkit-transition: color ease 0.3s;
+  transition: color ease 0.3s;
+}
+
+/* .link-1::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 106%;
+  height: 6%;
+  left: -2%;
+  bottom: 0;
+  background-color: #adb5bd;
+
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.link-1:hover {
+  color: white;
+}
+
+.link-1:hover::after {
+  height: 106%;
+} */
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-450px * 7));
+    transform: translateX(calc(-450px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-450px * 7));
+    transform: translateX(calc(-450px * 7));
+  }
+}
+.slider {
+  background: white;
+  /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125); */
+  height: 14vh;
+  margin: auto;
+  display: -webkit-box;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  transition: 1s;
+}
+.slider::before,
+.slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite alternate;
+  animation: scroll 40s linear infinite alternate;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: flex;
+  width: calc(950px * 14);
+  transition: 5s;
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+  transition: 1s;
+}
+@media screen and (max-width: 800px) {
+  .logo-head h1 {
+    font-size: 2em;
+  }
+}

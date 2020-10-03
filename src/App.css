@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+}
+/* Scrollbar Styling */
+body::-webkit-scrollbar {
+  width: 0.2em;
+  background: #1c2237;
+}
+body::-webkit-scrollbar-thumb {
+  background: #f00946;
+  height: 90px !important;
+}
+
+body::-webkit-scrollbar-track-piece {
+  display: none;
+}
+
+body {
+  cursor: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+.first {
+  background-color: #343a40;
+}
+
+.second {
+  background-color: #343a40;
+  left: 34%;
+}
+
+.third {
+  background-color: #343a40;
+  left: 66%;
+}
